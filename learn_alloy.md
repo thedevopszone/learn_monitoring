@@ -12,6 +12,12 @@ systemctl enable alloy
 systemctl status alloy
 ```
 
+## GUI
+
+```
+--server.http.listen-addr=LISTEN_ADDR:12345
+```
+
 ```
 http://localhost:12345
 ```
