@@ -106,5 +106,35 @@ WantedBy=multi-user.target
 ```
 
 
+## Rules
+
+vi rules.yml
+```
+groups:
+  - name: rules-demo
+    rules:
+      - record: job:node_cpu_seconds:usage
+        expr: sum without(cpu, mode)(rate(node_cpu_seconds_total{mode!="idle"}[5m]))/count without(cpu)(count without(mode)(node_cpu_seconds_total)) * 100
+      - alert: CPUUsageAbove20%
+        expr: 60 > job:node_cpu_seconds:usage > 20
+        for: 1m
+        labels:
+          severity: warn
+          team: dev
+      - alert: CPUUsageAbove60%
+        expr: job:node_cpu_seconds:usage >= 60
+        for: 1m
+        labels:
+          severity: urgent
+          team: devops, management
+```
+
+
+vi prometheus.yml
+```
+rule_files:
+  - rules/rules*.yml
+```
+
 
 
