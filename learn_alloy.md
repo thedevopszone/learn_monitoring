@@ -15,7 +15,7 @@ systemctl status alloy
 ## GUI
 
 ```
---server.http.listen-addr=LISTEN_ADDR:12345
+--server.http.listen-addr=0.0.0.0:12345
 ```
 
 ```
