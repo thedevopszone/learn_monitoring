@@ -186,6 +186,13 @@ groups:
 ```
 
 
+Good Examples:  
+- https://samber.github.io/awesome-prometheus-alerts/rules.html
+- https://samber.github.io/awesome-prometheus-alerts/
+- https://sysdig.com/blog/prometheus-alertmanager/
+- https://www.squadcast.com/blog/prometheus-sample-alert-rules
+- https://github.com/samber/awesome-prometheus-alerts
+
 
 vi prometheus.yml
 ```
