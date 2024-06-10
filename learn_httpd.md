@@ -1,3 +1,15 @@
+#
+
+##
+
+```
+dnf install httpd
+systemctl start httpd
+systemctl enable httpd
+
+dnf install mod_ssl
+```
+
 
 
 
