@@ -17,3 +17,14 @@ scrape_configs:
           agent: promtail
           __path__: /var/log/*.log
 ```
+
+## Run Promtail
+
+```
+./promtail -client.url http://localhost:3100/loki/api/v1/push -config.file=config.yml -positions.file=positions.yml
+
+
+```
+
+
+
