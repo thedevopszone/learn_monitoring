@@ -36,3 +36,16 @@ vi fluent.conf
 
 ```
 
+
+## Run Fluentd
+
+```
+fluentd -c fluent.conf
+```
+
+
+
+
+
+
+
