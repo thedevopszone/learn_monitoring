@@ -21,6 +21,7 @@ scrape_configs:
 ## Run Promtail
 
 ```
+# -client.url defines where Loki is running
 ./promtail -client.url http://localhost:3100/loki/api/v1/push -config.file=config.yml -positions.file=positions.yml
 
 
